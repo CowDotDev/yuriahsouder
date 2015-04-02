@@ -141,8 +141,8 @@ var pageAnimation = (function(w, d, pub){
 							'from_email': 'no-reply@yuriahsouder.com',
 							'to': [
 								{
-									'email': 'zach@strawhat.io',
-									'name': 'Zach Case',
+									'email': 'yuriahsouder@gmail.com',
+									'name': 'Yuriah Souder',
 									'type': 'to'
 								}
 							],
