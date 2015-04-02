@@ -4,6 +4,8 @@
 // Color Variables
 @white: #FFF;
 @indexHighlight: #D4B402;
+@skillsHighlight: #FF2652;
+@contactHighlight: #F08354;
 @nav: #333;
 
 // Keyframes
@@ -145,7 +147,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 }
-body,form,input,button{
+body,form,input,textarea,button{
 	font-family: 'Oswald', sans-serif;
 }
 
@@ -311,6 +313,35 @@ body,form,input,button{
 	&:hover{
 		cursor: pointer;
 		background-color: @indexHighlight;
+		.transition(.5s);
+	}
+	&.skills{
+		label i{
+			color: @skillsHighlight;
+			.transition(.5s);
+
+			&:hover{
+				color: @white;
+			}
+		}
+		&:hover{
+			background-color: @skillsHighlight;
+			.transition(.5s);
+		}
+	}
+	&.contact{
+		label i{
+			color: @contactHighlight;
+			.transition(.5s);
+
+			&:hover{
+				color: @white;
+			}
+		}
+		&:hover{
+			background-color: @contactHighlight;
+			.transition(.5s);
+		}
 	}
 }
 #nameHeader{
@@ -332,7 +363,20 @@ body,form,input,button{
 
 		i{
 			margin-right: .25em;
-			color: @indexHighlight
+			color: @indexHighlight;
+			.transition(.5s);
+		}
+	}
+	&.skills{
+		p i{
+			color: @skillsHighlight;
+			.transition(.5s);
+		}
+	}
+	&.contact{
+		p i{
+			color: @contactHighlight;
+			.transition(.5s);
 		}
 	}
 }
@@ -399,10 +443,10 @@ body,form,input,button{
 
 // Index Page
 #indexPage{
-	z-index: 2;
+	z-index: 3;
 	background-image: url("../images/pages/index/background.png");
 
-	#addToTimeline{
+	#addToTimelineMsg{
 		position: absolute;
 		z-index: 3;
 		top: 35%;
@@ -420,12 +464,14 @@ body,form,input,button{
 			text-shadow: 0px 2px 0px darken(@white, 20%), 0px 0px 25px fade(#000, 60%);
 			line-height: 1.5em;
 		}
-		button{
+		a{
+			display: inline-block;
 			padding: .5em;
 			background-color: @indexHighlight;
 			color: @white;
 			border: 0px solid transparent;
 			font-size: 1.4em;
+			text-decoration: none;
 			.rounded(4px);
 			.drop-shadow(0px, 5px, 10px, -5px, #000, 60%);
 			.transition(.25s);
@@ -453,7 +499,7 @@ body,form,input,button{
 	}
 }
 #indexPageAdditional{
-	z-index: 1;
+	z-index: 2;
 	background-image: url("../images/pages/index/background.png");
 
 	#summary{
@@ -493,6 +539,144 @@ body,form,input,button{
 			color: @white;
 			text-shadow: 0px 0px 25px fade(#000, 60%);
 			line-height: 1.2em;
+		}
+	}
+}
+
+// Skills Page
+#skillsPage{
+	z-index: 2;
+	background-image: url("../images/pages/skills/background.png");
+}
+
+// Contact Page
+#contactPage{
+	z-index: 1;
+	background-image: url("../images/pages/contact/background.jpg");
+
+	#contactForm{
+		position: absolute;
+		z-index: 1;
+		top: 22.5%;
+		left: 0;
+		right: 0;
+		padding: 0 .5em;
+
+		h2{
+			max-width: 960px;
+			margin: 0 auto;
+			margin-bottom: .25em;
+			font-size: 2.2em;
+			color: @white;
+			text-shadow: 0px 2px 0px darken(@white, 20%), 0px 0px 25px fade(#000, 60%);
+			text-align: center;
+
+			i{
+				height: 1em;
+				width: 1em;
+				text-align: center;
+				padding: .25em;
+				margin-right: .25em;
+				color: @white;
+				border: 4px solid @white;
+				text-shadow: 0px 0px 20px fade(#000, 40%);
+				box-shadow: 0px 0px 20px 0px fade(#000, 40%);
+				box-sizing: content-box;
+				.rounded(50%);
+			}
+		}
+		p{
+			max-width: 960px;
+			margin: 0 auto;
+			font-size: 1.4em;
+			color: @white;
+			text-shadow: 0px 0px 25px fade(#000, 60%);
+			line-height: 1.2em;
+			text-align: center;
+		}
+		hr{
+			display: block;
+			width: 100%;
+			max-width: 960px;
+			height: 1px;
+			margin: 1.25em auto;
+			border: 0px solid transparent;
+			border-top: 1px solid fade(@white, 50%);
+			border-style: dashed;
+		}
+		form{
+			max-width: 960px;
+			margin: 0 auto;
+			font-size: 1.4em;
+
+			#contactSubmit{
+				width: 100%;
+				font-size: 1.2em;
+				padding: .5em;
+				color: @white;
+				background-color: @contactHighlight;
+				border: 0px solid transparent;
+				.rounded(4px);
+				.transition(.5s);
+				.drop-shadow(0px, 6px, 5px, -5px, #000, 60%);
+
+				i{
+					margin-right: .25em;
+				}
+				&:hover{
+					cursor: pointer;
+					background-color: darken(@contactHighlight, 5%);
+				}
+			}
+			.formBlock{
+				margin-bottom: .5em;
+
+				input, textarea{
+					display: block;
+					width: 100%;
+					padding: 0;
+					margin: 0;
+					font-size: .75em;
+					color: @white;
+					border: 0px solid transparent;
+					background-color: transparent;
+					text-shadow: 0px 0px 5px fade(#000, 40%);
+
+					&::-webkit-input-placeholder {
+					   color: fade(@white, 85%);
+					}
+					&:-moz-placeholder { /* Firefox 18- */
+					   color: fade(@white, 85%);  
+					}
+					&::-moz-placeholder {  /* Firefox 19+ */
+					   color: fade(@white, 85%);  
+					}
+					&:-ms-input-placeholder {  
+					   color: fade(@white, 85%);  
+					}
+				}
+				input{
+					border-bottom: 1px solid fade(@white, 35%);
+				}
+				textarea{
+					min-width: 100%;
+					max-width: 100%;
+					min-height: 150px;
+					max-height: 300px;
+					background-color: fade(#333,10%);
+				}
+				&.half{
+					float: left;
+					width: 50%;
+
+					&.left{
+						padding-right: .5em;
+					}
+					&.right{
+						padding-left: .5em;
+					}
+				}
+			}
 		}
 	}
 }

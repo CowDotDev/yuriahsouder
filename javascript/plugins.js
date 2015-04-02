@@ -33,8 +33,13 @@ var skillsAnimation = (function(w, d, pub){
  * Call pageAnimation.createEvents() to initiate page animations on scroll.
  */
 var pageAnimation = (function(w, d, pub){
+	var siteNav = $("#siteNav");
+	var nameHeader = $("#nameHeader");
+
 	pub.createEvents = function(){
 		indexPage();
+		skillsPage();
+		contactPage();
 	}
 	pub.navScroll = function(){
 		$(".js-navLink").click(function(e){
@@ -47,13 +52,19 @@ var pageAnimation = (function(w, d, pub){
 	}
 	indexPage = function(){
 		$("#indexPage").fracs(function(data){
+			if(data.visible > .50 && siteNav.hasClass('contact')){
+				siteNav.removeClass();
+				nameHeader.removeClass();
+				nameHeader.addClass('rotateElement');
+			}
+
 			var fade = data.visible;
 				fade = (fade != 1) ? fade * .75 : 1;
 				fade = (fade <= .15) ? 0 : fade,
 				yuriah = $("#yuriah");
 
 			yuriah.css('opacity',fade);
-			$("#addToTimeline").css('opacity',fade);
+			$("#addToTimelineMsg").css('opacity',fade);
 
 			// Hide the Picture from the DOM so it doesn't overlay text on additional page(s)
 			if(fade == 0 && yuriah.is(':visible')){
@@ -63,7 +74,35 @@ var pageAnimation = (function(w, d, pub){
 			}
 		});
 		$("#indexPageAdditional").fracs(function(data){
+			if(data.visible > .50 && (siteNav.hasClass('contact') || siteNav.hasClass('skills'))){
+				siteNav.removeClass();
+				nameHeader.removeClass();
+				nameHeader.addClass('rotateElement');
+			}
+
 			$("#summary").css('opacity',data.visible);
+		});
+	}
+	skillsPage = function(){
+		$("#skillsPage").fracs(function(data){
+			if(data.visible > .50 && !siteNav.hasClass('skills')){
+				siteNav.removeClass();
+				siteNav.addClass('skills');
+				nameHeader.removeClass();
+				nameHeader.addClass('skills rotateElement');
+			}
+		});
+	}
+	contactPage = function(){
+		$("#contactPage").fracs(function(data){
+			if(data.visible > .50 && !siteNav.hasClass('contact')){
+				siteNav.removeClass();
+				siteNav.addClass('contact');
+				nameHeader.removeClass();
+				nameHeader.addClass('contact rotateElement');
+			}
+
+			$("#contactForm").css('opacity',data.visible);
 		});
 	}
 

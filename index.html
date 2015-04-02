@@ -6,7 +6,7 @@
 
 		<link rel='stylesheet' href='stylesheets/reset.css'>
 		<link rel='stylesheet' href='stylesheets/style.css'>
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 		<script src="javascript/modernizr.js"></script> <!-- Modernizr -->
 
 		<title>Yuriah Souder - Intrapreneur</title>
@@ -33,6 +33,26 @@
 						</div>
 						<div class='linkContent'>
 							<p class='singleLine'>Summary</p>
+						</div>
+					</li>
+				</a>
+				<a href='#skillsPage' class='js-navLink'>
+					<li class='clearfix'>
+						<div class='linkLabel'>
+							<i class='fa fa-certificate'></i>
+						</div>
+						<div class='linkContent'>
+							<p class='singleLine'>Skills</p>
+						</div>
+					</li>
+				</a>
+				<a href='#contactPage' class='js-navLink'>
+					<li class='clearfix'>
+						<div class='linkLabel'>
+							<i class='fa fa-envelope'></i>
+						</div>
+						<div class='linkContent'>
+							<p class='singleLine'>Contact</p>
 						</div>
 					</li>
 				</a>
@@ -104,24 +124,61 @@
 				</span>
 			</p>
 		</div>
-		<!-- Add to Timeline Page -->
+		<!-- First Page Page -->
 		<div id="indexPage" class='page'>
 			<div class='pageContent'>
-				<div id='addToTimeline'>
+				<div id='addToTimelineMsg'>
 					<h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</h2>
-					<button><i class='fa fa-plus'></i>Add to My Timeline</button>
+					<a href='#contactPage' class='js-navLink'><i class='fa fa-plus'></i>Add to My Timeline</a>
 				</div>
 				<div id="yuriah" class=''>
 					<img src='images/pages/index/layer2.png' alt='Yuriah Souder' />
 				</div>
 			</div>
 		</div>
-		<!-- Add to Timeline Page -->
+		<!-- Summary Page -->
 		<div id="indexPageAdditional" class='page'>
 			<div class='pageContent'>
 				<div id='summary'>
 					<h2 class='rotateElement'><i class='fa fa-pencil'></i>Summary</h2>
 					<p class='rotateElement'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+		</div>
+		<!-- Skills Page -->
+		<div id="skillsPage" class='page'>
+			<div class='pageContent'>
+				
+			</div>
+		</div>
+		<!-- Add to Timeline (Contact) Page -->
+		<div id="contactPage" class='page'>
+			<div class='pageContent'>
+				<div id='contactForm'>
+					<h2><i class='fa fa-envelope'></i>Let's Forge a New Path</h2>
+					<p>If you think I'd be a good fit for your company, please reach out to me.<br>Let's create something that will leave a lasting impact.</p>
+					<hr />
+					<form class='clearfix'>
+						<div class='formBlock half left'>
+							<input type='text' name='firstName' id='contactFirstName' placeholder='First Name' class='clearfix'/>
+						</div>
+						<div class='formBlock half right clearfix'>
+							<input type='text' name='lastName' id='contactLastName' placeholder='Last Name' class='clearfix'/>
+						</div>
+						<div class='formBlock half left'>
+							<input type='email' name='email' id='contactEmail' placeholder='E-mail Address' class='clearfix'/>
+						</div>
+						<div class='formBlock half right clearfix'>
+							<input type='text' name='tel' id='contactTel' placeholder='Phone #: (555) 555-5555' class='clearfix'/>
+						</div>
+						<div class='formBlock clearfix'>
+							<input type='text' name='company' id='contactCompany' placeholder='Company' class='clearfix' />
+						</div>
+						<div class='formBlock clearfix'>
+							<textarea name='note' id='contactNote' class='clearfix'>Send a short message describing who you are!</textarea>
+						</div>
+						<button id='contactSubmit'><i class='fa fa-send'></i>Send Message</button>
+					</form>
 				</div>
 			</div>
 		</div>

@@ -147,6 +147,7 @@ body {
 body,
 form,
 input,
+textarea,
 button {
   font-family: 'Oswald', sans-serif;
 }
@@ -319,6 +320,44 @@ button {
 #siteNav:hover {
   cursor: pointer;
   background-color: #d4b402;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#siteNav.skills label i {
+  color: #ff2652;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#siteNav.skills label i:hover {
+  color: #ffffff;
+}
+#siteNav.skills:hover {
+  background-color: #ff2652;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#siteNav.contact label i {
+  color: #f08354;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#siteNav.contact label i:hover {
+  color: #ffffff;
+}
+#siteNav.contact:hover {
+  background-color: #f08354;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 #nameHeader {
   position: fixed;
@@ -340,6 +379,24 @@ button {
 #nameHeader p i {
   margin-right: .25em;
   color: #d4b402;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#nameHeader.skills p i {
+  color: #ff2652;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+#nameHeader.contact p i {
+  color: #f08354;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .words-wrapper {
   display: inline-block;
@@ -402,10 +459,10 @@ button {
   animation: rotate-1-out 1s;
 }
 #indexPage {
-  z-index: 2;
+  z-index: 3;
   background-image: url("../images/pages/index/background.png");
 }
-#indexPage #addToTimeline {
+#indexPage #addToTimelineMsg {
   position: absolute;
   z-index: 3;
   top: 35%;
@@ -414,7 +471,7 @@ button {
   padding: 0 .5em;
   text-align: center;
 }
-#indexPage #addToTimeline h2 {
+#indexPage #addToTimelineMsg h2 {
   max-width: 960px;
   margin: 0 auto;
   margin-bottom: .5em;
@@ -423,12 +480,14 @@ button {
   text-shadow: 0px 2px 0px #cccccc, 0px 0px 25px rgba(0, 0, 0, 0.6);
   line-height: 1.5em;
 }
-#indexPage #addToTimeline button {
+#indexPage #addToTimelineMsg a {
+  display: inline-block;
   padding: .5em;
   background-color: #d4b402;
   color: #ffffff;
   border: 0px solid transparent;
   font-size: 1.4em;
+  text-decoration: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -440,10 +499,10 @@ button {
   -o-transition: all 0.25s ease-out;
   transition: all 0.25s ease-out;
 }
-#indexPage #addToTimeline button i {
+#indexPage #addToTimelineMsg a i {
   margin-right: .25em;
 }
-#indexPage #addToTimeline button:hover {
+#indexPage #addToTimelineMsg a:hover {
   cursor: pointer;
   background-color: #e3c102;
 }
@@ -459,7 +518,7 @@ button {
   min-width: 960px;
 }
 #indexPageAdditional {
-  z-index: 1;
+  z-index: 2;
   background-image: url("../images/pages/index/background.png");
 }
 #indexPageAdditional #summary {
@@ -500,4 +559,146 @@ button {
   color: #ffffff;
   text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
   line-height: 1.2em;
+}
+#skillsPage {
+  z-index: 2;
+  background-image: url("../images/pages/skills/background.png");
+}
+#contactPage {
+  z-index: 1;
+  background-image: url("../images/pages/contact/background.jpg");
+}
+#contactPage #contactForm {
+  position: absolute;
+  z-index: 1;
+  top: 22.5%;
+  left: 0;
+  right: 0;
+  padding: 0 .5em;
+}
+#contactPage #contactForm h2 {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: .25em;
+  font-size: 2.2em;
+  color: #ffffff;
+  text-shadow: 0px 2px 0px #cccccc, 0px 0px 25px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+#contactPage #contactForm h2 i {
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  padding: .25em;
+  margin-right: .25em;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  box-sizing: content-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#contactPage #contactForm p {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 1.4em;
+  color: #ffffff;
+  text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.6);
+  line-height: 1.2em;
+  text-align: center;
+}
+#contactPage #contactForm hr {
+  display: block;
+  width: 100%;
+  max-width: 960px;
+  height: 1px;
+  margin: 1.25em auto;
+  border: 0px solid transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-style: dashed;
+}
+#contactPage #contactForm form {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 1.4em;
+}
+#contactPage #contactForm form #contactSubmit {
+  width: 100%;
+  font-size: 1.2em;
+  padding: .5em;
+  color: #ffffff;
+  background-color: #f08354;
+  border: 0px solid transparent;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  -webkit-box-shadow: 0px 6px 5px -5px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px 6px 5px -5px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 6px 5px -5px rgba(0, 0, 0, 0.6);
+}
+#contactPage #contactForm form #contactSubmit i {
+  margin-right: .25em;
+}
+#contactPage #contactForm form #contactSubmit:hover {
+  cursor: pointer;
+  background-color: #ee723d;
+}
+#contactPage #contactForm form .formBlock {
+  margin-bottom: .5em;
+}
+#contactPage #contactForm form .formBlock input,
+#contactPage #contactForm form .formBlock textarea {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: .75em;
+  color: #ffffff;
+  border: 0px solid transparent;
+  background-color: transparent;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+#contactPage #contactForm form .formBlock input::-webkit-input-placeholder,
+#contactPage #contactForm form .formBlock textarea::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+#contactPage #contactForm form .formBlock input:-moz-placeholder,
+#contactPage #contactForm form .formBlock textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(255, 255, 255, 0.85);
+}
+#contactPage #contactForm form .formBlock input::-moz-placeholder,
+#contactPage #contactForm form .formBlock textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(255, 255, 255, 0.85);
+}
+#contactPage #contactForm form .formBlock input:-ms-input-placeholder,
+#contactPage #contactForm form .formBlock textarea:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+#contactPage #contactForm form .formBlock input {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+#contactPage #contactForm form .formBlock textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 300px;
+  background-color: rgba(51, 51, 51, 0.1);
+}
+#contactPage #contactForm form .formBlock.half {
+  float: left;
+  width: 50%;
+}
+#contactPage #contactForm form .formBlock.half.left {
+  padding-right: .5em;
+}
+#contactPage #contactForm form .formBlock.half.right {
+  padding-left: .5em;
 }
