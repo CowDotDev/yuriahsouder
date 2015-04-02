@@ -619,10 +619,39 @@ button {
   border-top: 1px solid rgba(255, 255, 255, 0.5);
   border-style: dashed;
 }
+#contactPage #contactForm .simpleLoading {
+  display: none;
+}
+#contactPage #contactForm #successBlock {
+  display: none;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  font-size: 1em;
+  background-color: rgba(118, 235, 108, 0.65);
+  color: #ffffff;
+  padding: .5em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: .5em;
+}
 #contactPage #contactForm form {
   max-width: 960px;
   margin: 0 auto;
   font-size: 1.4em;
+}
+#contactPage #contactForm form #errorBlock {
+  display: none;
+  width: 100%;
+  font-size: .55em;
+  background-color: rgba(230, 69, 69, 0.65);
+  color: #ffffff;
+  padding: .5em;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: .5em;
 }
 #contactPage #contactForm form #contactSubmit {
   width: 100%;
