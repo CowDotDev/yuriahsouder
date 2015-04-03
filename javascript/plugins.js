@@ -3,30 +3,30 @@
  * Loop through all of the skills in the header.
  * Call skillsAnimation.animateHeadline(parameter) where parameter is the parent element holding the skills.
  */
-var skillsAnimation = (function(w, d, pub){
-	var animationDelay = 5000;
+// var skillsAnimation = (function(w, d, pub){
+// 	var animationDelay = 5000;
 
-	pub.animateHeadline = function($headlines) {
-		$headlines.each(function(){
-			var headline = $(this);
-			setTimeout(function(){ pub.hideWord( headline.find('.is-visible') ) }, animationDelay);
-		});
-	}
-	pub.hideWord = function($word) {
-		var nextWord = pub.takeNext($word);
-		pub.switchWord($word, nextWord);
-		setTimeout(function(){ pub.hideWord(nextWord) }, animationDelay);
-	}
-	pub.takeNext = function($word) {
-		return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
-	}
-	pub.switchWord = function($oldWord, $newWord) {
-		$oldWord.removeClass('is-visible').addClass('is-hidden');
-		$newWord.removeClass('is-hidden').addClass('is-visible');
-	}
+// 	pub.animateHeadline = function($headlines) {
+// 		$headlines.each(function(){
+// 			var headline = $(this);
+// 			setTimeout(function(){ pub.hideWord( headline.find('.is-visible') ) }, animationDelay);
+// 		});
+// 	}
+// 	pub.hideWord = function($word) {
+// 		var nextWord = pub.takeNext($word);
+// 		pub.switchWord($word, nextWord);
+// 		setTimeout(function(){ pub.hideWord(nextWord) }, animationDelay);
+// 	}
+// 	pub.takeNext = function($word) {
+// 		return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+// 	}
+// 	pub.switchWord = function($oldWord, $newWord) {
+// 		$oldWord.removeClass('is-visible').addClass('is-hidden');
+// 		$newWord.removeClass('is-hidden').addClass('is-visible');
+// 	}
 
-	return pub;
-})(window, document, {});
+// 	return pub;
+// })(window, document, {});
 /*
  * pageAnimation Function
  * Event handlers for each page so the elements fadeIn/fadeOut appropriately.
@@ -94,6 +94,40 @@ var pageAnimation = (function(w, d, pub){
 				nameHeader.removeClass();
 				nameHeader.addClass('skills rotateElement');
 			}
+
+			if(data.visible >= .75){
+				loadSkillFiller();
+			}
+
+			if(data.visible < .25){
+				resetSkillFiller();
+			}
+
+			$("#skillsBlock").css('opacity',data.visible);
+		});
+	}
+	loadSkillFiller = function(){
+		$(".skillBar").each(function(){
+			var num 		= parseInt($(this).find('.fill').attr('data-number')),
+				percentage 	= (num / 10) * 100,
+				text;
+
+			if(percentage <= 40){
+				text = "Beginner";
+			}else if(percentage <= 70){
+				text = "Skilled";
+			}else{
+				text = "Expert";
+			}
+
+			$(this).find('.text').text(text);
+			$(this).find('.fill').css('width', percentage+"%");
+		});
+	}
+	resetSkillFiller = function(){
+		$(".skillBar").each(function(){
+			$(this).find('.text').text('');
+			$(this).find('.fill').css('width','0%');
 		});
 	}
 	contactPage = function(){

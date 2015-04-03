@@ -171,6 +171,18 @@ button {
   -o-transform: rotateX(13deg) rotateY(-25deg) translateZ(0px);
   transform: rotateX(13deg) rotateY(-25deg) translateZ(0px);
 }
+.rotateElementOpposite {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(13deg) rotateY(15deg) translateZ(0px);
+  -moz-transform: rotateX(13deg) rotateY(15deg) translateZ(0px);
+  -ms-transform: rotateX(13deg) rotateY(15deg) translateZ(0px);
+  -o-transform: rotateX(13deg) rotateY(15deg) translateZ(0px);
+  transform: rotateX(13deg) rotateY(15deg) translateZ(0px);
+}
 .page {
   position: relative;
   height: 100%;
@@ -524,7 +536,7 @@ button {
 #indexPageAdditional #summary {
   position: absolute;
   z-index: 3;
-  top: 35%;
+  top: 27.5%;
   left: 0;
   right: 0;
   padding: 0 .5em;
@@ -563,6 +575,99 @@ button {
 #skillsPage {
   z-index: 2;
   background-image: url("../images/pages/skills/background.png");
+}
+#skillsPage #skillsBlock {
+  position: absolute;
+  z-index: 2;
+  top: 27.5%;
+  left: 0;
+  right: 0;
+  padding: 0 .5em;
+}
+#skillsPage #skillsBlock h2 {
+  max-width: 960px;
+  margin: 0 auto;
+  margin-bottom: .25em;
+  font-size: 2.2em;
+  color: #ffffff;
+  text-shadow: 0px 2px 0px #cccccc, 0px 0px 25px rgba(0, 0, 0, 0.6);
+  text-align: left;
+}
+#skillsPage #skillsBlock h2 i {
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  padding: .25em;
+  margin-right: .25em;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+  box-sizing: content-box;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+#skillsPage #skillsBlock hr {
+  width: 100%;
+  max-width: 960px;
+  border: 0px solid transparent;
+  border-top: 1px dashed #ffffff;
+  margin: 1em auto;
+}
+#skillsPage #skillsBlock #skillsHolder {
+  max-width: 960px;
+  margin: 0 auto;
+}
+#skillsPage #skillsBlock #skillsHolder #leftBlock {
+  float: left;
+  width: 50%;
+  padding-right: 1em;
+}
+#skillsPage #skillsBlock #skillsHolder #rightBlock {
+  float: left;
+  width: 50%;
+  padding-left: 1em;
+}
+#skillsPage #skillsBlock #skillsHolder .skill {
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+#skillsPage #skillsBlock #skillsHolder .skill p {
+  float: left;
+  width: 50%;
+  font-size: 1.2em;
+  line-height: 1.6667em;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.9);
+}
+#skillsPage #skillsBlock #skillsHolder .skill .skillBar {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 2em;
+  display: block;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#skillsPage #skillsBlock #skillsHolder .skill .skillBar .fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background-color: #ff2652;
+  -webkit-transition: all 0.75s ease-out;
+  -moz-transition: all 0.75s ease-out;
+  -o-transition: all 0.75s ease-out;
+  transition: all 0.75s ease-out;
+}
+#skillsPage #skillsBlock #skillsHolder .skill .skillBar .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 2em;
+  color: #ffffff;
+  text-shadow: 0px 0px 8px rgba(140, 0, 28, 0.75);
 }
 #contactPage {
   z-index: 1;
@@ -695,21 +800,21 @@ button {
 }
 #contactPage #contactForm form .formBlock input::-webkit-input-placeholder,
 #contactPage #contactForm form .formBlock textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 #contactPage #contactForm form .formBlock input:-moz-placeholder,
 #contactPage #contactForm form .formBlock textarea:-moz-placeholder {
   /* Firefox 18- */
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 #contactPage #contactForm form .formBlock input::-moz-placeholder,
 #contactPage #contactForm form .formBlock textarea::-moz-placeholder {
   /* Firefox 19+ */
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 #contactPage #contactForm form .formBlock input:-ms-input-placeholder,
 #contactPage #contactForm form .formBlock textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 }
 #contactPage #contactForm form .formBlock input {
   border-bottom: 1px solid rgba(255, 255, 255, 0.35);
