@@ -811,3 +811,224 @@ body,form,input,textarea,button{
 		}
 	}
 }
+
+//Stylings for Mobile
+@media (max-width: 776px){
+	html, body{
+		background-color: ghostwhite;
+	}
+	.rotateElement, .rotateElementOpposite{
+		-webkit-transform-style: none;
+		-moz-transform-style: none;
+		-ms-transform-style: none;
+		-o-transform-style: none;
+		transform-style: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+	.page{
+		height: auto;
+		background: none;
+		background-color: ghostwhite;
+	
+		.pageContent{
+			position: relative;
+			top: inherit;
+			left: inherit;
+		}
+	}
+
+	#indexPage, #indexPageAdditional, #skillsPage, #contactPage{
+		background: none;
+	}
+	#nameHeader{
+		position: relative;
+		top: inherit;
+		left: inherit;
+		width: 100%;
+		padding: 20px 10px;
+		border-bottom: 1px solid #DDD;
+		box-shadow: 0 1px 0px 0px #FFF;
+
+
+		h1{
+			font-size: 2.6em;
+			color: #666;
+			text-shadow: 0px -1px 0px #FFF;
+		}
+		p{
+			color: #999;
+			text-shadow: 0px -1px 0px #FFF;
+		}
+	}
+	#siteNav{
+		top: 1.5em;
+		bottom: inherit;
+	}
+
+	#indexPage{
+		#addToTimelineMsg{
+			display: block !important;
+			position: relative;
+			z-index: inherit;
+			top: inherit;
+			left: inherit;
+			padding: 20px 10px;
+			background-color: #FFF;
+			border-bottom: 1px solid #DDD;
+			box-shadow: 0px 1px 0px 0px #FFF;
+
+			h2{
+				font-size: 1.6em;
+				color: #666;
+				text-shadow: 0px -1px 0px #FFF;
+			}
+		}
+		#yuriah{
+			display: none !important;
+		}
+	}
+
+	#indexPageAdditional{
+		#summary{
+			display: block !important;
+			position: relative;
+			z-index: inherit;
+			top: inherit;
+			left: inherit;
+			padding: 20px 10px;
+
+			h2{
+				font-size: 1.8em;
+				color: @indexHighlight;
+				text-shadow: 0px -1px 0px #FFF;
+
+				i{
+					color: @indexHighlight;
+					text-shadow: 0px -1px 0px #FFF;
+					border-color: @indexHighlight;
+					.drop-shadow(0px, -1px, 0px, 0px, #FFF, 100%);
+				}
+			}
+			p{
+				font-size: 1.2em;
+				color: #666;
+				text-shadow: 0px -1px 0px #FFF;
+				line-height: 1.5em;
+			}
+		}
+	}
+
+	#skillsPage{
+		#skillsBlock{
+			display: block !important;
+			position: relative;
+			z-index: inherit;
+			top: inherit;
+			left: inherit;
+			padding: 20px 10px;
+
+			h2{
+				font-size: 1.8em;
+				color: @skillsHighlight;
+				text-shadow: 0px -1px 0px #FFF;
+
+				i{
+					color: @skillsHighlight;
+					text-shadow: 0px -1px 0px #FFF;
+					border-color: @skillsHighlight;
+					.drop-shadow(0px, -1px, 0px, 0px, #FFF, 100%);
+				}
+			}
+			hr{
+				border-color: #CCC;
+			}
+			#skillsHolder{
+				#leftBlock, #rightBlock{
+					float: none;
+					width: 100%;
+					padding: 0;
+				}
+				.skill{
+					p{
+						font-size: 1em;
+						color: #666;
+						text-shadow: 0px -1px 0px #FFF;
+					}
+				}
+			}
+		}
+	}
+
+	#contactPage{
+		#contactForm{
+			display: block !important;
+			position: relative;
+			z-index: inherit;
+			top: inherit;
+			left: inherit;
+			padding: 20px 10px;
+
+			h2{
+				text-align: left;
+				font-size: 1.8em;
+				color: @contactHighlight;
+				text-shadow: 0px -1px 0px #FFF;
+
+				i{
+					color: @contactHighlight;
+					text-shadow: 0px -1px 0px #FFF;
+					border-color: @contactHighlight;
+					.drop-shadow(0px, -1px, 0px, 0px, #FFF, 100%);
+				}
+			}
+			hr{
+				border-color: #CCC;
+			}
+			p{
+				display: none;
+			}
+			form{
+				.formBlock{
+					&.half{
+						float: none;
+						width: 100%;
+						
+						&.left,&.right{
+							padding: 0;
+						}
+					}
+					input, textarea{
+						color: #999;
+						padding: 5px 8px;
+						background-color: #FFF;
+						border: 1px solid #DDD;
+						text-shadow: 0px -1px 0px #FFF; 
+
+						&::-webkit-input-placeholder {
+						   color: #CCC;
+						}
+						&:-moz-placeholder { /* Firefox 18- */
+						   color: #CCC;  
+						}
+						&::-moz-placeholder {  /* Firefox 19+ */
+						   color: #CCC;  
+						}
+						&:-ms-input-placeholder {  
+						   color: #CCC;  
+						}
+					}
+				}
+			}
+			#successBlock{
+				p{
+					display: block;
+					text-shadow: 0px 0px 0px transparent;
+				}
+			}
+		}
+	}
+}

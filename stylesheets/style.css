@@ -1,10 +1,10 @@
-@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 /*---------------------------------------------------
     LESS Elements 0.9
   ---------------------------------------------------
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,300,700);
 @-webkit-keyframes rotate-1-in {
   0% {
     -webkit-transform: rotateX(180deg);
@@ -835,4 +835,208 @@ button {
 }
 #contactPage #contactForm form .formBlock.half.right {
   padding-left: .5em;
+}
+@media (max-width: 776px) {
+  html,
+  body {
+    background-color: ghostwhite;
+  }
+  .rotateElement,
+  .rotateElementOpposite {
+    -webkit-transform-style: none;
+    -moz-transform-style: none;
+    -ms-transform-style: none;
+    -o-transform-style: none;
+    transform-style: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+  .page {
+    height: auto;
+    background: none;
+    background-color: ghostwhite;
+  }
+  .page .pageContent {
+    position: relative;
+    top: inherit;
+    left: inherit;
+  }
+  #indexPage,
+  #indexPageAdditional,
+  #skillsPage,
+  #contactPage {
+    background: none;
+  }
+  #nameHeader {
+    position: relative;
+    top: inherit;
+    left: inherit;
+    width: 100%;
+    padding: 20px 10px;
+    border-bottom: 1px solid #DDD;
+    box-shadow: 0 1px 0px 0px #FFF;
+  }
+  #nameHeader h1 {
+    font-size: 2.6em;
+    color: #666;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #nameHeader p {
+    color: #999;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #siteNav {
+    top: 1.5em;
+    bottom: inherit;
+  }
+  #indexPage #addToTimelineMsg {
+    display: block !important;
+    position: relative;
+    z-index: inherit;
+    top: inherit;
+    left: inherit;
+    padding: 20px 10px;
+    background-color: #FFF;
+    border-bottom: 1px solid #DDD;
+    box-shadow: 0px 1px 0px 0px #FFF;
+  }
+  #indexPage #addToTimelineMsg h2 {
+    font-size: 1.6em;
+    color: #666;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #indexPage #yuriah {
+    display: none !important;
+  }
+  #indexPageAdditional #summary {
+    display: block !important;
+    position: relative;
+    z-index: inherit;
+    top: inherit;
+    left: inherit;
+    padding: 20px 10px;
+  }
+  #indexPageAdditional #summary h2 {
+    font-size: 1.8em;
+    color: #d4b402;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #indexPageAdditional #summary h2 i {
+    color: #d4b402;
+    text-shadow: 0px -1px 0px #ffffff;
+    border-color: #d4b402;
+    -webkit-box-shadow: 0px -1px 0px 0px #ffffff;
+    -moz-box-shadow: 0px -1px 0px 0px #ffffff;
+    box-shadow: 0px -1px 0px 0px #ffffff;
+  }
+  #indexPageAdditional #summary p {
+    font-size: 1.2em;
+    color: #666;
+    text-shadow: 0px -1px 0px #ffffff;
+    line-height: 1.5em;
+  }
+  #skillsPage #skillsBlock {
+    display: block !important;
+    position: relative;
+    z-index: inherit;
+    top: inherit;
+    left: inherit;
+    padding: 20px 10px;
+  }
+  #skillsPage #skillsBlock h2 {
+    font-size: 1.8em;
+    color: #ff2652;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #skillsPage #skillsBlock h2 i {
+    color: #ff2652;
+    text-shadow: 0px -1px 0px #ffffff;
+    border-color: #ff2652;
+    -webkit-box-shadow: 0px -1px 0px 0px #ffffff;
+    -moz-box-shadow: 0px -1px 0px 0px #ffffff;
+    box-shadow: 0px -1px 0px 0px #ffffff;
+  }
+  #skillsPage #skillsBlock hr {
+    border-color: #CCC;
+  }
+  #skillsPage #skillsBlock #skillsHolder #leftBlock,
+  #skillsPage #skillsBlock #skillsHolder #rightBlock {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+  #skillsPage #skillsBlock #skillsHolder .skill p {
+    font-size: 1em;
+    color: #666;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #contactPage #contactForm {
+    display: block !important;
+    position: relative;
+    z-index: inherit;
+    top: inherit;
+    left: inherit;
+    padding: 20px 10px;
+  }
+  #contactPage #contactForm h2 {
+    text-align: left;
+    font-size: 1.8em;
+    color: #f08354;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #contactPage #contactForm h2 i {
+    color: #f08354;
+    text-shadow: 0px -1px 0px #ffffff;
+    border-color: #f08354;
+    -webkit-box-shadow: 0px -1px 0px 0px #ffffff;
+    -moz-box-shadow: 0px -1px 0px 0px #ffffff;
+    box-shadow: 0px -1px 0px 0px #ffffff;
+  }
+  #contactPage #contactForm hr {
+    border-color: #CCC;
+  }
+  #contactPage #contactForm p {
+    display: none;
+  }
+  #contactPage #contactForm form .formBlock.half {
+    float: none;
+    width: 100%;
+  }
+  #contactPage #contactForm form .formBlock.half.left,
+  #contactPage #contactForm form .formBlock.half.right {
+    padding: 0;
+  }
+  #contactPage #contactForm form .formBlock input,
+  #contactPage #contactForm form .formBlock textarea {
+    color: #999;
+    padding: 5px 8px;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    text-shadow: 0px -1px 0px #ffffff;
+  }
+  #contactPage #contactForm form .formBlock input::-webkit-input-placeholder,
+  #contactPage #contactForm form .formBlock textarea::-webkit-input-placeholder {
+    color: #CCC;
+  }
+  #contactPage #contactForm form .formBlock input:-moz-placeholder,
+  #contactPage #contactForm form .formBlock textarea:-moz-placeholder {
+    /* Firefox 18- */
+    color: #CCC;
+  }
+  #contactPage #contactForm form .formBlock input::-moz-placeholder,
+  #contactPage #contactForm form .formBlock textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #CCC;
+  }
+  #contactPage #contactForm form .formBlock input:-ms-input-placeholder,
+  #contactPage #contactForm form .formBlock textarea:-ms-input-placeholder {
+    color: #CCC;
+  }
+  #contactPage #contactForm #successBlock p {
+    display: block;
+    text-shadow: 0px 0px 0px transparent;
+  }
 }
